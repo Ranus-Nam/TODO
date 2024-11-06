@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
+    path('todoapp/', include('todoapp.urls')), # main/todo app url
+    path('', include('authapp.urls')), # Authentication app url
     path('admin/', admin.site.urls),
-    path('', include('todoapp.urls')),
 ]
